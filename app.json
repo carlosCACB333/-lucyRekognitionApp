@@ -12,9 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -22,11 +20,27 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.carloscacb333.recognition"
     },
     "web": {
       "bundler": "metro",
       "favicon": "./assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b8729d89-2747-4e71-b6b8-b26ab296ce1b"
+      }
     }
-  }
+  },
+  "plugins": [
+    "expo-camera",
+    {
+      "cameraPermission": "Permitir  ${PRODUCT_NAME} para acessar a câmera?"
+    },
+    "expo-image-picker",
+    {
+      "photosPermission": "Permitir ${PRODUCT_NAME} para acessar as fotos?"
+    }
+  ]
 }
